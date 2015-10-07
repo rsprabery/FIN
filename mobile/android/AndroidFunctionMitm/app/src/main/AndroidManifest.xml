@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.androidfunctionmitm">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MitmConfigLoaderActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        /* This lets the module appear in the module selection portion of the Xposed app */
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+
+        /* This description will appear in the Xposed Application when enabling/disabling modules */
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Mitm a function." />
+
+        /* If you downloaded a different version of XposedBridgeApi-$VERSION, change the 54 to
+        $VERSION */
+        <meta-data
+            android:name="xposedminversion"
+            android:value="54" />
+    </application>
+
+</manifest>
