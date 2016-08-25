@@ -2,7 +2,7 @@
 
 FIN allows you to easily MITM functions on Android. Why? When reversing apps you'll often find custom protocols. With the growing popularity of bluetooth devices and the usage of the [audio port for communication](http://web.eecs.umich.edu/~prabal/projects/hijack/), you may spend many hours reversing a protocol. To intercept an audio connection, you must implement your own soft-modem and then reverse the encoding scheme, baud rate, and other seemingly esoteric variables. It's much easier to simply hook the methods "Encode" and "Decode" (if the applications has them) and replace the inputs or outputs if you need to fuzz the protocol.
 
-That's great, but then you have to write redundant code every time you reverse a new app. That's where FIN comes in. This project allows you to specify the functions to hook, which parts to replace (either the arguments or the return value), and provides a server for managing and modifying the inputs. For a more detailed introduction, see my [blog post]() I wrote while interning at [NCC Group](https://www.nccgroup.trust/us/).
+That's great, but then you have to write redundant code every time you reverse a new app. That's where FIN comes in. This project allows you to specify the functions to hook, which parts to replace (either the arguments or the return value), and provides a server for managing and modifying the inputs. For a more detailed introduction, see my [blog post](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2015/october/mitming-custom-protocols-on-mobile-devices/) I wrote while interning at [NCC Group](https://www.nccgroup.trust/us/).
 
 ## <a id="toc">TOC</a>
 1. [Android](#android)
@@ -248,7 +248,7 @@ Right now, the code on Android can only use built in types. If you need to imple
 	- When modifying the `isBuiltInType` method, you'll need to be sure to rewrite `convertArgToString` as well, as instructed above.
 
 ## <a id="resources">Resources</a>
-- [FIN Tutorial]() on NCC Group's website.
+- [FIN Tutorial](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2015/october/mitming-custom-protocols-on-mobile-devices/) on NCC Group's website.
 - [Getting Started with Function Hooking](https://www.nccgroup.trust/us/about-us/newsroom-and-events/blog/2015/september/code-injection-on-android/) - My blog post written at NCC Group.
 - [Xposed Framework](http://repo.xposed.info/module/de.robv.android.xposed.installer) - the framework that makes this possible.
 - [APK Downloader](https://apps.evozi.com/apk-downloader/) - download APK's with just a link from Google Play.
